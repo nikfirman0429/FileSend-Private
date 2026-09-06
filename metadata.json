@@ -1,0 +1,8 @@
+{
+  "name": "FileSend Private",
+  "description": "Secure, direct end-to-end cloud file transfer app with SHA-256 integrity verification and private code access.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
