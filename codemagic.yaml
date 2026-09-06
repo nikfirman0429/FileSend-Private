@@ -19,6 +19,11 @@ workflows:
 
           echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
 
+      -name: Check signing setup
+       script: |
+        echo "KEYSTORE_PATH=$CM_KEYSTORE_PATH"
+        ls -la "$CM_KEYSTORE_PATH"
+
       - name: Build APK
         script: |
           cd "$CM_BUILD_DIR"
