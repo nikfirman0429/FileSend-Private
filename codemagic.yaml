@@ -1,0 +1,27 @@
+workflows:
+
+  android-build:
+
+    name: FileSend Private Android
+
+    max_build_duration: 120
+
+    instance_type: mac_mini_m2
+
+    scripts:
+
+      - name: Set Android SDK location
+
+        script: |
+
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
+
+      - name: Build APK
+
+        script: |
+
+          ./gradlew assembleRelease
+
+    artifacts:
+
+      - app/build/outputs/**/*.apk
