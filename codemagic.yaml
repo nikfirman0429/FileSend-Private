@@ -20,7 +20,7 @@ workflows:
 
         script: |
 
-          ./gradlew assembleRelease
+          gradlew assembleRelease
 
     artifacts:
 
